@@ -15,10 +15,17 @@ public class Products {
         this.availableProducts = new HashMap<>();
     }
 
+    /*
+     * Adds product to the vending machine 
+     */
     public void addProduct(int productNumber, Product product) {
         availableProducts.put(productNumber, product);
     }
 
+    /*
+     * Checks if the product exists (by the number) in the vending
+     * machine and if so gets it.
+     */
     public Product getProduct(int productNumber) throws Exception {
 
         if (!availableProducts.containsKey(productNumber)) {
@@ -27,6 +34,9 @@ public class Products {
         return availableProducts.get(productNumber);
     }
 
+    /**
+     * @return products available in the vending machine
+     */
     public Collection<Entry<Integer, Product>> getAllProducts() {
         return availableProducts.entrySet();
     }

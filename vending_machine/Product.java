@@ -7,6 +7,9 @@ public class Product {
     private String name;
     private double price;
 
+    /*
+     * Constructor of the product
+     */
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
